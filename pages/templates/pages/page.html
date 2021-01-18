@@ -1,0 +1,12 @@
+{% comment %} v1 {% endcomment %}
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% comment %} v2 {% endcomment %}
+{% load xextends %}
+{% xextends 'base.html' with title=page.title %}
+
+{% block content %}
+    {% autoescape off %}
+        {{ page.content }}
+    {% endautoescape %}
+{% endblock %}
